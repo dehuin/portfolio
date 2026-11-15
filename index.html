@@ -3,16 +3,20 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio • Ingeniería & Sistemas Embebidos</title>
+  <title>Dehuin Magallanes • Portfolio Profesional</title>
   <meta name="description" content="Portfolio profesional de Ingeniería Industrial, desarrollo IoT, sistemas embebidos ESP32 y automatización."/>
 
-  <!-- Google Fonts: Inter / Plus Jakarta Sans para máxima legibilidad -->
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome para Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
   <script>
     tailwind.config = {
       theme: {
@@ -38,7 +42,7 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col justify-between selection:bg-dark selection:text-white">
 
-  <!-- Header / Menú Minimalista -->
+  <!-- Header / Menú de Navegación -->
   <header class="w-full max-w-3xl mx-auto px-6 pt-12 pb-6 flex justify-between items-center text-sm">
     <a href="#" class="font-bold tracking-tight text-dark hover:opacity-75 transition-opacity">
       Dehuin Magallanes<span class="text-neutral-400">.</span>
@@ -67,10 +71,10 @@
         Estudiante avanzado de Ingeniería Industrial con un marcado perfil técnico. Me especializo en la integración de hardware, desarrollo con <strong>ESP32</strong>, automatización y optimización operativa.
       </p>
 
-      <div class="flex items-center gap-4 pt-2 font-mono text-xs text-muted">
-        <span>📍 Bahía Blanca, Argentina</span>
+      <div class="flex flex-wrap items-center gap-4 pt-2 font-mono text-xs text-muted">
+        <span><i class="fa-solid fa-location-dot mr-1"></i> Bahía Blanca, Argentina</span>
         <span>•</span>
-        <span>Inglés B2</span>
+        <span><i class="fa-solid fa-language mr-1"></i> Inglés B2</span>
       </div>
     </section>
 
@@ -122,41 +126,52 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="p-5 rounded-2xl bg-white border border-neutral-200/80 space-y-2 shadow-sm">
-          <h3 class="font-bold text-dark text-sm">IoT & Sistemas Embebidos</h3>
+          <h3 class="font-bold text-dark text-sm"><i class="fa-solid fa-microchip text-neutral-500 mr-2"></i>IoT & Sistemas Embebidos</h3>
           <p class="text-xs text-muted leading-relaxed">Programación en ESP32, firmware embebido, sensores, actuadores y protocolos de comunicación conectados.</p>
         </div>
 
         <div class="p-5 rounded-2xl bg-white border border-neutral-200/80 space-y-2 shadow-sm">
-          <h3 class="font-bold text-dark text-sm">Tecnología Automotriz</h3>
+          <h3 class="font-bold text-dark text-sm"><i class="fa-solid fa-car text-neutral-500 mr-2"></i>Tecnología Automotriz</h3>
           <p class="text-xs text-muted leading-relaxed">Diagnóstico computarizado, sistemas electrónicos vehiculares, clonación y programación de módulos.</p>
         </div>
 
         <div class="p-5 rounded-2xl bg-white border border-neutral-200/80 space-y-2 shadow-sm">
-          <h3 class="font-bold text-dark text-sm">Ingeniería Industrial</h3>
+          <h3 class="font-bold text-dark text-sm"><i class="fa-solid fa-industry text-neutral-500 mr-2"></i>Ingeniería Industrial</h3>
           <p class="text-xs text-muted leading-relaxed">Mejora continua, gestión de calidad, estandarización de procesos productivos y control operativo.</p>
         </div>
 
         <div class="p-5 rounded-2xl bg-white border border-neutral-200/80 space-y-2 shadow-sm">
-          <h3 class="font-bold text-dark text-sm">Desarrollo & Diseño</h3>
+          <h3 class="font-bold text-dark text-sm"><i class="fa-solid fa-code text-neutral-500 mr-2"></i>Desarrollo & Diseño</h3>
           <p class="text-xs text-muted leading-relaxed">Desarrollo web moderno, diseño gráfico, modelado 3D (Fusion 360, AutoCAD) y automatización.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sección Formulario de Contacto (Protegido por Web3Forms) -->
+    <!-- Sección Formulario de Contacto y Redes -->
     <section id="contacto" class="pt-4">
       <div class="p-8 rounded-2xl bg-white border border-neutral-200/80 shadow-sm space-y-6">
         <div class="space-y-1">
           <h2 class="text-xl font-bold text-dark">Contacto</h2>
-          <p class="text-xs text-muted">Enviame un mensaje directo. La respuesta llegará de forma automática a mi correo personal sin exponer datos privados.</p>
+          <p class="text-xs text-muted">Enviame un mensaje directo o conectá conmigo a través de mis redes profesionales.</p>
         </div>
 
-        <!-- Formulario configurado con Web3Forms (Reemplazar TU_ACCESS_KEY) -->
-        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-          
-          <!-- Clave pública de Web3Forms -->
+        <!-- Enlaces a Redes Sociales -->
+        <div class="flex items-center gap-4 pt-1">
+          <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="px-4 py-2 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-dark text-xs font-medium transition-colors flex items-center gap-2">
+            <i class="fa-brands fa-linkedin text-sm"></i> LinkedIn
+          </a>
+          <a href="https://github.com/tu-usuario" target="_blank" class="px-4 py-2 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-dark text-xs font-medium transition-colors flex items-center gap-2">
+            <i class="fa-brands fa-github text-sm"></i> GitHub
+          </a>
+          <a href="mailto:tu-correo@ejemplo.com" class="px-4 py-2 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-dark text-xs font-medium transition-colors flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-sm"></i> Email
+          </a>
+        </div>
+
+        <!-- Formulario Web3Forms -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 pt-2 border-t border-neutral-100">
           <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
-          <input type="hidden" name="subject" value="Nuevo mensaje desde Portfolio Minimalista">
+          <input type="hidden" name="subject" value="Nuevo mensaje desde Portfolio">
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
@@ -171,7 +186,7 @@
 
           <div>
             <label class="block font-mono text-[11px] text-muted mb-1">Mensaje</label>
-            <textarea name="message" rows="4" required placeholder="Escribí tu consulta o propuesta..." class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-dark text-xs focus:outline-none focus:border-dark transition-colors"></textarea>
+            <textarea name="message" rows="4" required placeholder="Escribí tu consulta..." class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-dark text-xs focus:outline-none focus:border-dark transition-colors"></textarea>
           </div>
 
           <button type="submit" class="w-full py-3 rounded-xl bg-dark text-white font-medium text-xs hover:bg-neutral-800 transition-colors">
