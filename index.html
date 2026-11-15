@@ -1,189 +1,396 @@
-<!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio • Ingeniería & Sistemas Embebidos</title>
-  <meta name="description" content="Portfolio profesional de Ingeniería Industrial, desarrollo IoT, sistemas embebidos ESP32 y automatización."/>
+<!DOCTYPE html><html lang="es" class="documento-del-portfolio"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+@charset "utf-8";
 
-  <!-- Google Fonts: Inter / Plus Jakarta Sans para máxima legibilidad -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+* { box-sizing: border-box; }
+
+body { margin: 0px; }
+
+:root { --gjs-t-color-primary: #111827; --gjs-t-color-secondary: #4b5563; --gjs-t-color-accent: #047857; --gjs-t-color-success: #15803d; --gjs-t-color-warning: #a16207; --gjs-t-color-error: #b91c1c; }
+
+.gjs-t-body { background-color: rgb(250, 250, 250); color: var(--gjs-t-color-primary); font-size: 14px; line-height: 1.7; font-family: "Plus Jakarta Sans", sans-serif; }
+
+.gjs-t-h1 { color: var(--gjs-t-color-primary); font-size: 46px; line-height: 1.18; }
+
+.gjs-t-h2 { color: var(--gjs-t-color-primary); font-size: 22px; line-height: 1.4; }
+
+.gjs-t-button { background-color: var(--gjs-t-color-primary); color: rgb(255, 255, 255); border-radius: 12px; }
+
+.gjs-t-link { color: var(--gjs-t-color-secondary); text-decoration: none; }
+
+.gjs-t-border { border-radius: 16px; border-color: rgb(229, 231, 235); }
+
+.mono { font-family: "JetBrains Mono", monospace; }
+
+*, ::before, ::after { box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(229, 231, 235); }
+
+html, :host { line-height: 1.5; text-size-adjust: 100%; tab-size: 4; font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-feature-settings: normal; font-variation-settings: normal; -webkit-tap-highlight-color: transparent; }
+
+body { margin: 0px; line-height: inherit; }
+
+hr { height: 0px; color: inherit; border-top-width: 1px; }
+
+abbr:where([title]) { text-decoration: underline dotted; }
+
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+
+a { color: inherit; text-decoration: inherit; }
+
+b, strong { font-weight: bolder; }
+
+code, kbd, samp, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-feature-settings: normal; font-variation-settings: normal; font-size: 1em; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+table { text-indent: 0px; border-color: inherit; border-collapse: collapse; }
+
+button, input, optgroup, select, textarea { font-family: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-size: 100%; font-weight: inherit; line-height: inherit; letter-spacing: inherit; color: inherit; margin: 0px; padding: 0px; }
+
+button, select { text-transform: none; }
+
+button, input:where([type="button"]), input:where([type="reset"]), input:where([type="submit"]) { appearance: button; background-color: transparent; background-image: none; }
+
+progress { vertical-align: baseline; }
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button { height: auto; }
+
+[type="search"] { appearance: textfield; outline-offset: -2px; }
+
+::-webkit-search-decoration { appearance: none; }
+
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+summary { display: list-item; }
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre { margin: 0px; }
+
+fieldset { margin: 0px; padding: 0px; }
+
+legend { padding: 0px; }
+
+ol, ul, menu { list-style: none; margin: 0px; padding: 0px; }
+
+dialog { padding: 0px; }
+
+textarea { resize: vertical; }
+
+input::placeholder, textarea::placeholder { opacity: 1; color: rgb(156, 163, 175); }
+
+button, [role="button"] { cursor: pointer; }
+
+:disabled { cursor: default; }
+
+img, svg, video, canvas, audio, iframe, embed, object { display: block; vertical-align: middle; }
+
+img, video { max-width: 100%; height: auto; }
+
+[hidden] { display: none; }
+
+.documento-del-portfolio { scroll-behavior: smooth; }
+
+.portfolio-profesional { min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+.portfolio-profesional ::selection { background-color: rgb(17, 24, 39); color: rgb(255, 255, 255); }
+
+.portfolio-profesional::selection { background-color: rgb(17, 24, 39); color: rgb(255, 255, 255); }
+
+.saltar-al-contenido { position: absolute; left: 1.5rem; top: 0.75rem; z-index: 50; transform: translate(0px, -6rem) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1) scaleY(1); border-radius: 0.5rem; background-color: rgb(255, 255, 255); padding: 0.5rem 1rem; font-size: 0.875rem; line-height: 1.25rem; }
+
+.saltar-al-contenido:focus { transform: translate(0px, 0px) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1) scaleY(1); outline-style: solid; outline-width: 2px; outline-offset: 2px; }
+
+.cabecera-del-portfolio { margin-left: auto; margin-right: auto; display: flex; width: 100%; max-width: 48rem; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 3rem 1.5rem 1.5rem; }
+
+.nombre-e-inicio { font-size: 0.875rem; line-height: 1.25rem; font-weight: 700; letter-spacing: -0.025em; color: var(--gjs-t-color-primary); transition-property: opacity; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.nombre-e-inicio:hover { opacity: 0.7; }
+
+.nombre-e-inicio:focus-visible { border-radius: 0.25rem; outline-style: solid; outline-width: 2px; outline-offset: 4px; }
+
+.detalle-de-marca { color: rgb(163, 163, 163); }
+
+.navegacin-principal { display: flex; align-items: center; gap: 1.5rem; font-size: 14px; line-height: 1.5; font-weight: 500; }
+
+.enlace-a-experiencia { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.enlace-a-experiencia:hover { color: var(--gjs-t-color-primary); }
+
+.enlace-a-experiencia:focus-visible { border-radius: 0.25rem; outline-style: solid; outline-width: 2px; outline-offset: 4px; }
+
+.enlace-a-habilidades { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.enlace-a-habilidades:hover { color: var(--gjs-t-color-primary); }
+
+.enlace-a-habilidades:focus-visible { border-radius: 0.25rem; outline-style: solid; outline-width: 2px; outline-offset: 4px; }
+
+.enlace-a-contacto { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.enlace-a-contacto:hover { color: var(--gjs-t-color-primary); }
+
+.enlace-a-contacto:focus-visible { border-radius: 0.25rem; outline-style: solid; outline-width: 2px; outline-offset: 4px; }
+
+.contenido-principal { margin-left: auto; margin-right: auto; display: flex; width: 100%; max-width: 48rem; flex-direction: column; gap: 5rem; padding: 2rem 1.5rem; }
+
+.presentacin-profesional { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+
+.especialidad-profesional { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 9999px; border-width: 1px; border-color: rgb(238, 238, 238); background-color: rgb(238, 238, 238); padding: 0.375rem 0.75rem; font-size: 12px; font-weight: 500; color: var(--gjs-t-color-secondary); }
+
+.indicador-de-especialidad { height: 0.375rem; width: 0.375rem; border-radius: 9999px; background-color: var(--gjs-t-color-accent); }
+
+.titular-de-presentacin { max-width: 690px; font-weight: 700; letter-spacing: -0.035em; font-size: 48px; line-height: 1.15; }
+
+.perfil-profesional { max-width: 42rem; font-size: 18px; line-height: 1.7; color: var(--gjs-t-color-secondary); }
+
+.especialidad-esp32 { font-weight: 600; color: var(--gjs-t-color-primary); }
+
+.ubicacin-e-idiomas { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; padding-top: 0.5rem; font-size: 12px; color: var(--gjs-t-color-secondary); }
+
+.ubicacin { display: inline-flex; align-items: center; gap: 0.375rem; }
+
+.separador-de-informacin { height: 0.75rem; width: 1px; background-color: rgb(212, 212, 212); }
+
+.trayectoria-profesional { display: flex; scroll-margin-top: 2.5rem; flex-direction: column; gap: 2.5rem; }
+
+.encabezado-de-experiencia { display: flex; align-items: center; gap: 1rem; }
+
+.ttulo-de-experiencia { flex-shrink: 0; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gjs-t-color-secondary); }
+
+.divisor-de-seccin { height: 1px; flex: 1 1 0%; background-color: rgb(229, 229, 229); }
+
+.lnea-de-tiempo { margin-left: 0.25rem; display: flex; flex-direction: column; gap: 2rem; border-left-width: 1px; border-color: rgb(229, 229, 229); padding-left: 1.5rem; }
+
+.experiencia-en-comercializacin { position: relative; display: flex; flex-direction: column; gap: 0.5rem; }
+
+.marcador-de-experiencia-actual { position: absolute; left: -29px; top: 0.375rem; height: 0.625rem; width: 0.625rem; border-radius: 9999px; background-color: var(--gjs-t-color-primary); box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgb(250, 250, 250) 0px 0px 0px calc(4px), rgba(0, 0, 0, 0) 0px 0px; }
+
+.cargo-y-perodo { display: flex; flex-direction: row; gap: 1rem; align-items: baseline; justify-content: space-between; }
+
+.cargo-de-comercializacin { font-size: 16px; font-weight: 700; line-height: 1.625; letter-spacing: -0.015em; }
+
+.perodo-de-comercializacin { font-size: 12px; color: var(--gjs-t-color-secondary); flex-shrink: 0; }
+
+.estado-actual { color: var(--gjs-t-color-accent); }
+
+.descripcin-de-comercializacin { font-size: 0.875rem; line-height: 1.7; color: var(--gjs-t-color-secondary); }
+
+.experiencia-en-servicio-tcnico { position: relative; display: flex; flex-direction: column; gap: 0.5rem; }
+
+.marcador-de-experiencia { position: absolute; left: -29px; top: 0.375rem; height: 0.625rem; width: 0.625rem; border-radius: 9999px; background-color: rgb(212, 212, 212); box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgb(250, 250, 250) 0px 0px 0px calc(4px), rgba(0, 0, 0, 0) 0px 0px; }
+
+.cargo-de-servicio-tcnico { font-size: 16px; font-weight: 700; line-height: 1.625; letter-spacing: -0.015em; }
+
+.perodo-de-servicio-tcnico { font-size: 12px; color: var(--gjs-t-color-secondary); flex-shrink: 0; }
+
+.descripcin-de-servicio-tcnico { font-size: 0.875rem; line-height: 1.7; color: var(--gjs-t-color-secondary); }
+
+.pasanta-en-ingeniera-de-procesos { position: relative; display: flex; flex-direction: column; gap: 0.5rem; }
+
+.cargo-de-ingeniera-de-procesos { font-size: 16px; font-weight: 700; line-height: 1.625; letter-spacing: -0.015em; }
+
+.empresa-ena { font-weight: 500; color: rgb(163, 163, 163); }
+
+.perodo-de-pasanta { font-size: 12px; color: var(--gjs-t-color-secondary); flex-shrink: 0; }
+
+.descripcin-de-pasanta { font-size: 0.875rem; line-height: 1.7; color: var(--gjs-t-color-secondary); }
+
+.habilidades-y-dominios { display: flex; scroll-margin-top: 2.5rem; flex-direction: column; gap: 1.75rem; }
+
+.encabezado-de-habilidades { display: flex; align-items: center; gap: 1rem; }
+
+.ttulo-de-habilidades { flex-shrink: 0; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gjs-t-color-secondary); }
+
+.cuadrcula-de-habilidades { display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 1rem; }
+
+.tarjeta-iot-y-sistemas-embebidos { display: flex; flex-direction: column; gap: 0.75rem; border-width: 1px; background-color: rgb(255, 255, 255); padding: 1.25rem; box-shadow: rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.tarjeta-iot-y-sistemas-embebidos:hover { border-color: rgb(163, 163, 163); }
+
+.ttulo-de-habilidad { font-size: 0.875rem; line-height: 1.25rem; font-weight: 700; }
+
+.descripcin-de-habilidad { font-size: 0.75rem; line-height: 1.85; color: var(--gjs-t-color-secondary); }
+
+.tarjeta-tecnologa-automotriz { display: flex; flex-direction: column; gap: 0.75rem; border-width: 1px; background-color: rgb(255, 255, 255); padding: 1.25rem; box-shadow: rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.tarjeta-tecnologa-automotriz:hover { border-color: rgb(163, 163, 163); }
+
+.tarjeta-ingeniera-industrial { display: flex; flex-direction: column; gap: 0.75rem; border-width: 1px; background-color: rgb(255, 255, 255); padding: 1.25rem; box-shadow: rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.tarjeta-ingeniera-industrial:hover { border-color: rgb(163, 163, 163); }
+
+.tarjeta-desarrollo-y-diseo { display: flex; flex-direction: column; gap: 0.75rem; border-width: 1px; background-color: rgb(255, 255, 255); padding: 1.25rem; box-shadow: rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.tarjeta-desarrollo-y-diseo:hover { border-color: rgb(163, 163, 163); }
+
+.seccin-de-contacto { scroll-margin-top: 2.5rem; padding-top: 1rem; }
+
+.tarjeta-de-contacto { display: flex; flex-direction: column; gap: 1.5rem; border-width: 1px; background-color: rgb(255, 255, 255); padding: 2rem; box-shadow: rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; }
+
+.presentacin-del-contacto { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.ttulo-de-contacto { font-weight: 700; letter-spacing: -0.025em; }
+
+.invitacin-de-contacto { font-size: 0.75rem; line-height: 1.8; color: var(--gjs-t-color-secondary); max-width: 36rem; }
+
+.formulario-de-contacto { display: flex; flex-direction: column; gap: 1rem; }
+
+.proteccin-antispam { display: none; }
+
+.datos-del-remitente { display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 1rem; }
+
+.campo-nombre { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.etiqueta-de-nombre { font-size: 11px; color: var(--gjs-t-color-secondary); }
+
+.entrada-de-nombre { width: 100%; border-radius: 0.75rem; border-width: 1px; border-color: rgb(229, 229, 229); background-color: rgb(250, 250, 250); padding: 0.625rem 0.875rem; font-size: 0.75rem; line-height: 1rem; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.entrada-de-nombre::placeholder { color: rgb(163, 163, 163); }
+
+.entrada-de-nombre:hover { border-color: rgb(212, 212, 212); }
+
+.entrada-de-nombre:focus { border-color: var(--gjs-t-color-primary); outline: transparent solid 2px; outline-offset: 2px; box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgb(229, 229, 229) 0px 0px 0px calc(2px), rgba(0, 0, 0, 0) 0px 0px; }
+
+.campo-email { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.etiqueta-de-email { font-size: 11px; color: var(--gjs-t-color-secondary); }
+
+.entrada-de-email { width: 100%; border-radius: 0.75rem; border-width: 1px; border-color: rgb(229, 229, 229); background-color: rgb(250, 250, 250); padding: 0.625rem 0.875rem; font-size: 0.75rem; line-height: 1rem; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.entrada-de-email::placeholder { color: rgb(163, 163, 163); }
+
+.entrada-de-email:hover { border-color: rgb(212, 212, 212); }
+
+.entrada-de-email:focus { border-color: var(--gjs-t-color-primary); outline: transparent solid 2px; outline-offset: 2px; box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgb(229, 229, 229) 0px 0px 0px calc(2px), rgba(0, 0, 0, 0) 0px 0px; }
+
+.campo-mensaje { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.etiqueta-de-mensaje { font-size: 11px; color: var(--gjs-t-color-secondary); }
+
+.entrada-de-mensaje { min-height: 8rem; width: 100%; resize: vertical; border-radius: 0.75rem; border-width: 1px; border-color: rgb(229, 229, 229); background-color: rgb(250, 250, 250); padding: 0.75rem 0.875rem; font-size: 0.75rem; line-height: 1.7; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.entrada-de-mensaje::placeholder { color: rgb(163, 163, 163); }
+
+.entrada-de-mensaje:hover { border-color: rgb(212, 212, 212); }
+
+.entrada-de-mensaje:focus { border-color: var(--gjs-t-color-primary); outline: transparent solid 2px; outline-offset: 2px; box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgb(229, 229, 229) 0px 0px 0px calc(2px), rgba(0, 0, 0, 0) 0px 0px; }
+
+.enviar-mensaje { display: flex; width: 100%; align-items: center; justify-content: center; gap: 0.5rem; padding-top: 0.875rem; padding-bottom: 0.875rem; font-size: 0.75rem; line-height: 1rem; font-weight: 600; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.enviar-mensaje:hover { background-color: rgb(38, 38, 38); }
+
+.enviar-mensaje:focus-visible { outline: rgb(38, 38, 38) solid 2px; outline-offset: 4px; }
+
+.estado-del-formulario { display: none; border-radius: 0.5rem; border-width: 1px; border-color: rgb(253, 230, 138); background-color: rgb(255, 251, 235); padding: 0.75rem; font-size: 0.75rem; line-height: 1rem; color: var(--gjs-t-color-warning); }
+
+.nota-de-configuracin { text-align: center; font-size: 10px; color: var(--gjs-t-color-secondary); }
+
+.pie-de-pgina { margin-left: auto; margin-right: auto; margin-top: 5rem; display: flex; width: 100%; max-width: 48rem; flex-direction: column; align-items: center; gap: 0.75rem; border-top-width: 1px; border-color: rgb(229, 229, 229); padding: 3rem 1.5rem; }
+
+.crdito-y-derechos { text-align: center; font-size: 12px; line-height: 1.625; color: var(--gjs-t-color-secondary); }
+
+.volver-al-inicio { display: flex; align-items: center; gap: 0.25rem; font-size: 10px; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.volver-al-inicio:hover { color: var(--gjs-t-color-primary); }
+
+.volver-al-inicio:focus-visible { outline-style: solid; outline-width: 2px; outline-offset: 4px; }
+
+.enviar-mensaje:disabled { opacity: 0.65; cursor: wait; }
+
+.form-status-visible { display: block; }
+
+.form-status-success { border-color: rgb(187, 247, 208); background-color: rgb(240, 253, 244); color: var(--gjs-t-color-success); }
+
+.form-status-error { border-color: rgb(254, 202, 202); background-color: rgb(254, 242, 242); color: var(--gjs-t-color-error); }
+
+#contenido { margin-top: auto; margin-bottom: auto; gap: 2rem; }
+
+#presentacion-2 { font-size: 37px; }
+
+#i2f18g { font-size: 24pt; }
+
+#i096rd { font-size: 36px; }
+
+#ii79e { text-align: center; position: static; font-size: 19px; }
+
+#ioo4nz { text-align: center; display: flex; flex-flow: column wrap; justify-content: space-around; }
+
+.gjs-plg-flex-column { flex-grow: 1; }
+
+#iwf81n { flex: 1 1 0%; align-self: flex-start; display: flex; flex-flow: row; gap: 11px; place-content: stretch flex-start; align-items: center; padding: 0px; }
+
+.gjs-plg-flex-row { display: flex; align-items: stretch; flex-wrap: nowrap; }
+
+#iyawtg { width: 100%; }
+
+#ivhwp1-2 { flex-direction: row; font-size: 1rem; line-height: 1rem; text-align: center; width: 18%; padding: 0.3rem 0.3px; border-radius: 9px; }
+
+#iau5sl { text-align: center; }
+
+.gjs-divider { height: 3px; width: 100%; margin: 10px; background-color: rgba(0, 0, 0, 0.05); }
+
+#i3c126 { margin: 0px; background-color: rgb(0, 0, 0); height: 2px; width: 50%; }
+
+#iop4kd { flex-basis: 100%; display: flex; flex-direction: column; gap: 2px; justify-content: center; align-items: flex-start; }
+
+#iyaeck { width: 100%; }
+
+#idf4z { flex-direction: column; align-items: flex-start; padding-left: 6px; }
+
+#idk6gb { font-size: 18px; }
+
+#if54i9 { font-size: 18px; }
+
+#ia3fjk { font-size: 18px; }
+
+#iczuff { font-size: 19px; }
+
+@media (max-width: 992px) {
+  .gjs-t-h1 { font-size: 40px; }
+  .cargo-y-perodo { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  .titular-de-presentacin { font-size: 40px; }
+}
+
+@media (max-width: 480px) {
+  .gjs-t-h1 { font-size: 32px; }
+  .navegacin-principal { font-size: 12px; }
+  .titular-de-presentacin { font-size: 32px; }
+  .perfil-profesional { font-size: 16px; line-height: 1.75; }
+  .ubicacin-e-idiomas { font-size: 10px; }
+  .cargo-de-comercializacin { font-size: 15px; }
+  .cargo-de-servicio-tcnico { font-size: 15px; }
+  .cargo-de-ingeniera-de-procesos { font-size: 15px; }
+  .perodo-de-comercializacin { font-size: 11px; }
+  .perodo-de-servicio-tcnico { font-size: 11px; }
+  .perodo-de-pasanta { font-size: 11px; }
+  .crdito-y-derechos { font-size: 10px; }
+}
+
+@media (max-width: 480px) {
+  .cabecera-del-portfolio { flex-direction: column; align-items: flex-start; gap: 1.25rem; padding-top: 1.75rem; }
+  .navegacin-principal { width: 100%; justify-content: space-between; gap: 1rem; }
+  .contenido-principal { gap: 3.5rem; padding-top: 1.75rem; }
+  .perfil-profesional { font-size: 0.875rem; line-height: 1.25rem; }
+  .ubicacin-e-idiomas { column-gap: 0.75rem; font-size: 10px; }
+  .cuadrcula-de-habilidades { grid-template-columns: repeat(1, minmax(0px, 1fr)); }
+  .tarjeta-de-contacto { padding: 1.25rem; }
+  .datos-del-remitente { grid-template-columns: repeat(1, minmax(0px, 1fr)); }
+  .pie-de-pgina { margin-top: 3.5rem; }
+}
+</style>
+    <title>Dehuin Magallanes • Ingeniería &amp; Sistemas Embebidos</title>
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            "sans": ["Plus Jakarta Sans", "sans-serif"],
-            "mono": ["JetBrains Mono", "monospace"]
-          },
-          colors: {
-            "canvas": "#fafafa",
-            "dark": "#111827",
-            "muted": "#4b5563"
-          }
-        }
-      }
-    }
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <meta name="description" content="Portfolio profesional de Dehuin Magallanes. Ingeniería Industrial, desarrollo IoT, sistemas embebidos ESP32 y automatización en Bahía Blanca, Argentina.">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  
+  </head>
+  <body id="ih9w" class="gjs-t-body portfolio-profesional"><a href="#contenido" class="saltar-al-contenido">Saltar al contenido</a><header id="inicio" class="cabecera-del-portfolio"><a href="#inicio" aria-label="Dehuin Magallanes, inicio" id="i7tka" class="nombre-e-inicio">Esto no es un CV.</a><nav aria-label="Navegación principal" class="navegacin-principal"><a href="#contacto" id="i90xy" class="gjs-t-link enlace-a-contacto"><b id="iczuff"><u>Contacto</u></b></a></nav></header><main id="contenido" class="contenido-principal"><section aria-labelledby="presentacion" id="i8mrp" class="presentacin-profesional"><h1 id="presentacion-2" class="gjs-t-h1 titular-de-presentacin">¿Quién soy?</h1><p id="i2h0m" class="perfil-profesional">Soy una persona, varón de 30 años. Soy hijo, hermano, amigo. Un ser apasionado y un curioso sin remedio. Soy muchas cosas, ahora que lo pienso.</p><h1 id="presentacion" class="gjs-t-h1 titular-de-presentacin"><span data-gs-mrk-fs="true" id="i096rd">¿Para qué “sirvo”?</span></h1><p id="icw1mn" class="perfil-profesional">Básicamente hago y mantengo cosas que sirven y funcionan. De sistemas, de procesos y de electrónica principalmente. Después lo que no conozco pero me gusta, lo aprendo hasta volverme experto en eso también.</p><p id="ipzcdj" class="perfil-profesional">Mis capacidades las debo principalmente a:</p><ul id="inc7kh"><li id="ie57ew">— lo que me enseñaron los profes en la carrera.</li><li id="i333ll">— las personas que me dieron oportunidades de oro para aprender del trabajo en equipo, de liderar, de saber administrarme y prestar atención al detalle.</li></ul><ul id="ip31u"><li></li></ul><p></p></section><div data-type-role="flex-row" id="iyawtg" class="gjs-plg-flex-row"><div data-type-role="flex-column" id="iwf81n" class="gjs-plg-flex-column"><h2 id="ii79e" class="cargo-de-comercializacin">¿Hablamos?</h2><button type="button" id="ivhwp1-2" class="gjs-t-button enviar-mensaje"><ol><li><h3 id="iau5sl">Enviar mensaje</h3></li></ol></button></div></div><div data-type-role="flex-row" id="iyaeck" class="gjs-plg-flex-row"><div data-type-role="flex-column" id="iop4kd" class="gjs-plg-flex-column"><h3 id="ioo4nz" class="cargo-de-comercializacin">Te invito a conocer un poco más…</h3><div id="i3c126" class="gjs-divider"></div></div></div><section id="experiencia" aria-labelledby="titulo-experiencia" class="trayectoria-profesional"><div class="encabezado-de-experiencia"><h2 id="titulo-experiencia" class="mono ttulo-de-experiencia">mis últimas Experiencias laborales</h2><div aria-hidden="true" class="divisor-de-seccin"></div></div><div class="lnea-de-tiempo"><article class="experiencia-en-comercializacin"><span aria-hidden="true" class="marcador-de-experiencia-actual"></span><div class="cargo-y-perodo"><h3 id="ifzt99" class="cargo-de-comercializacin">Comercialización de Módulos Electrónicos</h3><p class="mono perodo-de-comercializacin">Feb 2026 – <span class="estado-actual">Presente</span></p></div><p class="descripcin-de-comercializacin">Desarrollo y gestión integral de un negocio de comercialización de componentes para la industria automotriz. Administración de compras, marketing, ventas y soporte técnico postventa.</p></article><article class="experiencia-en-servicio-tcnico"><span aria-hidden="true" class="marcador-de-experiencia"></span><div class="cargo-y-perodo"><h3 class="cargo-de-servicio-tcnico">Servicio Técnico y Operaciones</h3><p class="mono perodo-de-servicio-tcnico">May 2024 – Dic 2025</p></div><p class="descripcin-de-servicio-tcnico">Diseño e implementación de capacitaciones técnicas para nuevos operadores, estandarización de procedimientos de reparación y coordinación diaria de equipos de trabajo para asegurar tiempos de entrega.</p></article><article class="pasanta-en-ingeniera-de-procesos"><span aria-hidden="true" class="marcador-de-experiencia"></span><div class="cargo-y-perodo"><h3 id="iwvbh" class="cargo-de-ingeniera-de-procesos">Ingeniería de Procesos (Pasantía) </h3><p class="mono perodo-de-pasanta">Oct 2023 – Mar 2024</p></div><p class="descripcin-de-pasanta">Optimización de procesos de encapsulado y packaging, elaboración de informes técnicos para la toma de decisiones productivas y colaboración estrecha con el área de calidad.</p></article></div></section><section id="skills" aria-labelledby="titulo-skills" class="habilidades-y-dominios"><div class="encabezado-de-habilidades"><h2 id="titulo-skills" class="mono ttulo-de-habilidades">algunos de mis dominios</h2><div aria-hidden="true" class="divisor-de-seccin"></div></div><div class="cuadrcula-de-habilidades"><article class="gjs-t-border tarjeta-iot-y-sistemas-embebidos"><img src="https://api.iconify.design/lucide-cpu.svg?color=%234b5563" width="21" height="21" alt="" loading="lazy" aria-hidden="true"><h3 class="ttulo-de-habilidad">IoT &amp; Sistemas Embebidos</h3><p id="itnyer" class="descripcin-de-habilidad">Programación , firmware embebido, sensores, actuadores y automatización.</p></article><article class="gjs-t-border tarjeta-tecnologa-automotriz"><img src="https://api.iconify.design/lucide-car.svg?color=%234b5563" width="21" height="21" alt="" loading="lazy" aria-hidden="true"><h3 class="ttulo-de-habilidad">Tecnología Automotriz</h3><p class="descripcin-de-habilidad">Diagnóstico computarizado, sistemas electrónicos vehiculares, clonación y programación de módulos.</p></article><article class="gjs-t-border tarjeta-ingeniera-industrial"><img src="https://api.iconify.design/lucide-workflow.svg?color=%234b5563" width="21" height="21" alt="" loading="lazy" aria-hidden="true"><h3 class="ttulo-de-habilidad">Ingeniería Industrial</h3><p class="descripcin-de-habilidad">Mejora continua, gestión de calidad, estandarización de procesos productivos y control operativo.</p></article><article class="gjs-t-border tarjeta-desarrollo-y-diseo"><img src="https://api.iconify.design/lucide-code-2.svg?color=%234b5563" width="21" height="21" alt="" loading="lazy" aria-hidden="true"><h3 class="ttulo-de-habilidad">Desarrollo &amp; Diseño</h3><p id="id17dp" class="descripcin-de-habilidad">Desarrollo web, diseño gráfico, modelado 2D y 3D.</p></article></div></section><div id="idf4z" title="nnnnn" class="mono ubicacin-e-idiomas"><h1 id="inbyh9"><ul><li id="ia3fjk">Vivo en Bahía Blanca, Buenos Aires.</li></ul></h1><span id="idk6gb">Inglés B2. Lo utilizo suficientemente bien.</span><span id="if54i9">Manejo (y tengo carnet).</span></div><section id="contacto" aria-labelledby="titulo-contacto" class="seccin-de-contacto"><div class="gjs-t-border tarjeta-de-contacto"><div class="presentacin-del-contacto"><h2 id="titulo-contacto" class="gjs-t-h2 ttulo-de-contacto">Contacto</h2><p id="ijypni" class="invitacin-de-contacto">¿Te queda una duda o tenés una propuesta? </p><div>Enviame un mensaje abajo sobre lo que quieras. Ni bien lo vea me pongo en contacto con vos.</div><p></p></div><form method="POST" id="formulario-contacto" action="https://api.web3forms.com/submit" data-js="contact-form" class="formulario-de-contacto" data-initialized="true"><input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" id="irupjf" class="proteccin-antispam"><div id="itkx5w" class="datos-del-remitente"><div id="ib9x2w" class="campo-nombre"><label for="nombre" id="iqrw84" class="mono etiqueta-de-nombre">Tu nombre</label><input type="text" id="nombre" name="name" autocomplete="name" required="" maxlength="120" placeholder="Nombre..." class="entrada-de-nombre"></div><div id="ib9x2w-2" class="campo-nombre"><label for="nombre" id="iqrw84-2" class="mono etiqueta-de-nombre">Un teléfono, email o forma de conectar con vos</label><input type="text" id="nombre-2" name="name" autocomplete="name" required="" maxlength="120" placeholder="Nombre..." class="entrada-de-nombre"></div></div><div id="ijxdza" class="campo-mensaje"><label for="mensaje" id="i9mfm7" class="mono etiqueta-de-mensaje">Mensaje</label><textarea id="mensaje" name="message" rows="4" required="" maxlength="5000" placeholder="Escribí tu consulta o propuesta..." class="entrada-de-mensaje"></textarea></div><button type="submit" id="ivhwp1" data-js="contact-submit" class="gjs-t-button enviar-mensaje">Enviar mensaje <img src="https://api.iconify.design/lucide-arrow-up-right.svg?color=%23ffffff" width="15" height="15" alt="" loading="lazy" aria-hidden="true" id="iams6i"></button><p id="estado-formulario" role="status" aria-live="polite" aria-atomic="true" data-js="contact-status" class="estado-del-formulario"></p><p id="im6og5" data-js="contact-note" class="nota-de-configuracin">El envío requiere configurar la clave pública de Web3Forms.</p></form></div></section></main><footer class="pie-de-pgina"><p id="istv3u" class="mono crdito-y-derechos">Última revisión: 10/10/2026</p><a href="#inicio" id="iq2who" class="gjs-t-link volver-al-inicio">Volver arriba<img src="https://api.iconify.design/lucide-arrow-up.svg?color=%234b5563" width="12" height="12" alt="" loading="lazy" aria-hidden="true"></a></footer>
 
-  <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fafafa; color: #111827; }
-    ::selection { background-color: #111827; color: #ffffff; }
-  </style>
-</head>
-<body class="antialiased min-h-screen flex flex-col justify-between selection:bg-dark selection:text-white">
-
-  <!-- Header / Menú Minimalista Original -->
-  <header class="w-full max-w-3xl mx-auto px-6 pt-12 pb-6 flex justify-between items-center text-sm">
-    <a href="#" class="font-bold tracking-tight text-dark hover:opacity-75 transition-opacity">
-      Dehuin Magallanes<span class="text-neutral-400">.</span>
-    </a>
-    <nav class="flex items-center gap-6 text-muted font-medium">
-      <a href="#contacto" class="hover:text-dark transition-colors">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- Contenido Principal -->
-  <main class="w-full max-w-3xl mx-auto px-6 space-y-20 py-8">
-
-    <!-- Sección Hero / Presentación -->
-    <section class="space-y-6">
-      <div class="inline-block px-3 py-1 rounded-full bg-neutral-200/60 text-neutral-700 font-mono text-xs font-medium">
-        Ingeniería Industrial & IoT
-      </div>
-      
-      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-dark leading-[1.15]">
-        Construyendo soluciones entre la mejora de procesos y los sistemas embebidos.
-      </h1>
-
-      <p class="text-muted text-base sm:text-lg leading-relaxed max-w-2xl">
-        Estudiante avanzado de Ingeniería Industrial con un marcado perfil técnico. Me especializo en la integración de hardware, desarrollo con <strong>ESP32</strong>, automatización y optimización operativa.
-      </p>
-
-      <div class="flex items-center gap-4 pt-2 font-mono text-xs text-muted">
-        <span>📍 Bahía Blanca, Argentina</span>
-        <span>•</span>
-        <span>Inglés B2</span>
-      </div>
-    </section>
-
-    <!-- Sección Trayectoria / Experiencia -->
-    <section id="experiencia" class="space-y-10">
-      <h2 class="text-xs font-mono font-bold tracking-wider uppercase text-neutral-400">Experiencia Seleccionada</h2>
-
-      <div class="space-y-8 border-l border-neutral-200 pl-6 ml-2">
-        
-        <div class="relative space-y-2">
-          <span class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-dark ring-4 ring-canvas"></span>
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-            <h3 class="font-bold text-dark text-base">Comercialización de Módulos Electrónicos</h3>
-            <span class="font-mono text-xs text-muted">Feb 2026 – Presente</span>
-          </div>
-          <p class="text-sm text-muted leading-relaxed">
-            Desarrollo y gestión integral de un negocio de comercialización de componentes para la industria automotriz. Administración de compras, marketing, ventas y soporte técnico postventa.
-          </p>
-        </div>
-
-        <div class="relative space-y-2">
-          <span class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-neutral-300 ring-4 ring-canvas"></span>
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-            <h3 class="font-bold text-dark text-base">Servicio Técnico y Operaciones</h3>
-            <span class="font-mono text-xs text-muted">May 2024 – Dic 2025</span>
-          </div>
-          <p class="text-sm text-muted leading-relaxed">
-            Diseño e implementación de capacitaciones técnicas para nuevos operadores, estandarización de procedimientos de reparación y coordinación diaria de equipos de trabajo para asegurar tiempos de entrega.
-          </p>
-        </div>
-
-        <div class="relative space-y-2">
-          <span class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-neutral-300 ring-4 ring-canvas"></span>
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-            <h3 class="font-bold text-dark text-base">Ingeniería de Procesos (Pasantía) • ENA</h3>
-            <span class="font-mono text-xs text-muted">Oct 2023 – Mar 2024</span>
-          </div>
-          <p class="text-sm text-muted leading-relaxed">
-            Optimización de procesos de encapsulado y packaging, elaboración de informes técnicos para la toma de decisiones productivas y colaboración estrecha con el área de calidad.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Sección Habilidades y Dominios -->
-    <section id="skills" class="space-y-8">
-      <h2 class="text-xs font-mono font-bold tracking-wider uppercase text-neutral-400">Habilidades & Dominios</h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="p-5 rounded-2xl bg-white border border-neutral-200/80 space-y-2 shadow-sm">
-          <h3 class="font-bold text-dark text-sm">IoT & Sistemas Embebidos</h3>
-          <p class="text-xs text-muted leading-relaxed">Programación en ESP32, firmware embebido, sensores, actuadores y protocolos de comunicación conectados.</p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-white border border-neutral-200/80 space-y-2 shadow-sm">
-          <h3 class="font-bold text-dark text-sm">Tecnología Automotriz</h3>
-          <p class="text-xs text-muted leading-relaxed">Diagnóstico computarizado, sistemas electrónicos vehiculares, clonación y programación de módulos.</p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-white border border-neutral-200/80 space-y-2 shadow-sm">
-          <h3 class="font-bold text-dark text-sm">Ingeniería Industrial</h3>
-          <p class="text-xs text-muted leading-relaxed">Mejora continua, gestión de calidad, estandarización de procesos productivos y control operativo.</p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-white border border-neutral-200/80 space-y-2 shadow-sm">
-          <h3 class="font-bold text-dark text-sm">Desarrollo & Diseño</h3>
-          <p class="text-xs text-muted leading-relaxed">Desarrollo web moderno, diseño gráfico, modelado 3D (Fusion 360, AutoCAD) y automatización.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Formulario de Contacto (Protegido por Web3Forms) -->
-    <section id="contacto" class="pt-4">
-      <div class="p-8 rounded-2xl bg-white border border-neutral-200/80 shadow-sm space-y-6">
-        <div class="space-y-1">
-          <h2 class="text-xl font-bold text-dark">Contacto</h2>
-          <p class="text-xs text-muted">Enviame un mensaje directo. La respuesta llegará de forma automática a mi correo personal sin exponer datos privados.</p>
-        </div>
-
-        <!-- Formulario configurado con Web3Forms -->
-        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-          
-          <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
-          <input type="hidden" name="subject" value="Nuevo mensaje desde Portfolio Minimalista">
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block font-mono text-[11px] text-muted mb-1">Tu Nombre</label>
-              <input type="text" name="name" required placeholder="Nombre..." class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-dark text-xs focus:outline-none focus:border-dark transition-colors">
-            </div>
-            <div>
-              <label class="block font-mono text-[11px] text-muted mb-1">Tu Email</label>
-              <input type="email" name="email" required placeholder="correo@ejemplo.com" class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-dark text-xs focus:outline-none focus:border-dark transition-colors">
-            </div>
-          </div>
-
-          <div>
-            <label class="block font-mono text-[11px] text-muted mb-1">Mensaje</label>
-            <textarea name="message" rows="4" required placeholder="Escribí tu consulta o propuesta..." class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-dark text-xs focus:outline-none focus:border-dark transition-colors"></textarea>
-          </div>
-
-          <button type="submit" class="w-full py-3 rounded-xl bg-dark text-white font-medium text-xs hover:bg-neutral-800 transition-colors">
-            Enviar Mensaje
-          </button>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="w-full max-w-3xl mx-auto px-6 py-12 text-center text-xs font-mono text-muted border-t border-neutral-200 mt-20">
-    <p>© 2026 • Diseñado con estilo minimalista para GitHub Pages</p>
-  </footer>
-
-</body>
-</html>
+</body></html>
